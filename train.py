@@ -6,7 +6,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, f1_score
 import os
+import os
+
+# Store MLflow runs in the local project folder
 os.environ["MLFLOW_TRACKING_URI"] = "file:./mlruns"
+os.environ["MLFLOW_ARTIFACT_URI"] = "./mlruns/artifacts"
 
 
 # Load data

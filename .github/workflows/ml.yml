@@ -18,3 +18,9 @@ jobs:
 
       - name: Run training
         run: python train.py
+        
+      - name: Upload MLflow runs
+        uses: actions/upload-artifact@v3
+        with:
+          name: mlruns
+          path: mlruns/
