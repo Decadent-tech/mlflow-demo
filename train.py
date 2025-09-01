@@ -5,6 +5,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, f1_score
+import os
+os.environ["MLFLOW_TRACKING_URI"] = "file:./mlruns"
+
 
 # Load data
 X, y = load_iris(return_X_y=True)
