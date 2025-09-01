@@ -1,15 +1,16 @@
 name: MLflow CI
 
 on: [push]
+  push:
+    branches: ["main"]
+  workflow_dispatch:
 
 jobs:
   train:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.9"
 
@@ -27,3 +28,12 @@ jobs:
         with:
           name: mlruns
           path: mlruns/
+      - name: Validate model
+        run: python validate.py
+
+      - name: Drift detection
+        run: python drift_check.py
+
+      - name: Deploy (only if passed validation + drift)
+        if: success()
+        run: echo "🚀 Deploying model..."
