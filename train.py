@@ -6,7 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, f1_score
 import os
-import os
+import pandas as pd 
 
 # Store MLflow runs in the local project folder
 os.environ["MLFLOW_TRACKING_URI"] = "file:./mlruns"
@@ -41,3 +41,12 @@ for name, model in models.items():
         mlflow.sklearn.log_model(model, "model")
 
         print(f"{name}: Accuracy={acc:.4f}, F1={f1:.4f}")
+        input_example = pd.DataFrame(X_test[:1], columns=[f"feature_{i}" for i in range(X.shape[1])])
+
+        # Explicitly force artifacts into ./mlruns
+        mlflow.sklearn.log_model(
+        model,
+        name="model",
+        input_example=input_example,
+        registered_model_name=None,
+        )
