@@ -41,12 +41,7 @@ for name, model in models.items():
         #mlflow.sklearn.log_model(model, name="model")
 
         print(f"{name}: Accuracy={acc:.4f}, F1={f1:.4f}")
-        input_example = pd.DataFrame(X_test[:1], columns=[f"feature_{i}" for i in range(X.shape[1])])
+        #input_example = pd.DataFrame(X_test[:1], columns=[f"feature_{i}" for i in range(X.shape[1])])
 
         # Explicitly force artifacts into ./mlruns
-        mlflow.sklearn.log_model(
-        model,
-        name="model",
-        input_example=input_example,
-        registered_model_name=None,
-        )
+        #mlflow.sklearn.log_model(model,name="model",input_example=input_example,registered_model_name=None)
