@@ -21,7 +21,15 @@ jobs:
       - name: Check MLflow version
         run: pip show mlflow
 
+      - name: Debug env vars
+        run: |
+          echo "MLFLOW_ARTIFACT_URI=$MLFLOW_ARTIFACT_URI"
+          echo "MLFLOW_TRACKING_URI=$MLFLOW_TRACKING_URI"
+        
       - name: Run training
+        env:
+          MLFLOW_TRACKING_URI: file:./mlruns
+          MLFLOW_ARTIFACT_URI: ./mlruns/artifacts
         run: python train.py
 
       - name: Upload MLflow runs
