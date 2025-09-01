@@ -9,7 +9,7 @@ This project demonstrates:
 
 ### 🛠️ Setup Locally
 
-git clone <repo-url>
-cd mlflow-demo
-pip install -r requirements.txt
-python train.py
+        git clone <https://github.com/Decadent-tech/mlflow-demo>
+        cd mlflow-demo
+        pip install -r requirements.txt
+        python train.py
