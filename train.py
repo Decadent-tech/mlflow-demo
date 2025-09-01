@@ -8,9 +8,11 @@ from sklearn.metrics import accuracy_score, f1_score
 import os
 import pandas as pd 
 
-# Store MLflow runs in the local project folder
-os.environ["MLFLOW_TRACKING_URI"] = "file:./mlruns"
-#os.environ["MLFLOW_ARTIFACT_URI"] = os.path.abspath("./mlruns/artifacts")
+# Store MLflow runs in a safe local directory inside your repo
+mlruns_dir = os.path.join(os.getcwd(), "mlruns")
+os.makedirs(mlruns_dir, exist_ok=True)
+
+mlflow.set_tracking_uri(f"file://{mlruns_dir}")
 
 
 # Load data
