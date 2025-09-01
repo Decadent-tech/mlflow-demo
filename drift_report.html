@@ -1,0 +1,1115 @@
+{
+  "id": "2091ba9e-e9e7-4f11-b840-7d4e5fc8faa9",
+  "name": null,
+  "timestamp": "2025-09-01T11:31:59.092634",
+  "metadata": {
+    "metric_presets": [
+      "DataDriftPreset"
+    ]
+  },
+  "tags": [],
+  "suite": {
+    "metrics": [
+      {
+        "type": "evidently.metrics.data_drift.dataset_drift_metric.DatasetDriftMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "stattest": null,
+        "cat_stattest": null,
+        "num_stattest": null,
+        "text_stattest": null,
+        "per_column_stattest": null,
+        "stattest_threshold": null,
+        "cat_stattest_threshold": null,
+        "num_stattest_threshold": null,
+        "text_stattest_threshold": null,
+        "per_column_stattest_threshold": null,
+        "columns": null,
+        "drift_share": 0.5
+      },
+      {
+        "type": "evidently.metrics.data_drift.data_drift_table.DataDriftTable",
+        "options": {
+          "color": null,
+          "render": null,
+          "custom": {}
+        },
+        "stattest": null,
+        "cat_stattest": null,
+        "num_stattest": null,
+        "text_stattest": null,
+        "per_column_stattest": null,
+        "stattest_threshold": null,
+        "cat_stattest_threshold": null,
+        "num_stattest_threshold": null,
+        "text_stattest_threshold": null,
+        "per_column_stattest_threshold": null,
+        "columns": null,
+        "feature_importance": false
+      }
+    ],
+    "metric_results": [
+      {
+        "type": "evidently.metrics.data_drift.dataset_drift_metric.DatasetDriftMetricResults",
+        "drift_share": 0.5,
+        "number_of_columns": 4,
+        "number_of_drifted_columns": 0,
+        "share_of_drifted_columns": 0.0,
+        "dataset_drift": false
+      },
+      {
+        "type": "evidently.metrics.data_drift.data_drift_table.DataDriftTableResults",
+        "number_of_columns": 4,
+        "number_of_drifted_columns": 0,
+        "share_of_drifted_columns": 0.0,
+        "dataset_drift": false,
+        "drift_by_columns": {
+          "petal length (cm)": {
+            "type": "evidently.calculations.data_drift.ColumnDataDriftMetrics",
+            "column_name": "petal length (cm)",
+            "column_type": "num",
+            "stattest_name": "K-S p_value",
+            "stattest_threshold": 0.05,
+            "drift_score": 0.8799325977736985,
+            "drift_detected": false,
+            "current": {
+              "type": "evidently.calculations.data_drift.DriftStatsField",
+              "distribution": {
+                "type": "evidently.metric_results.Distribution",
+                "x": [
+                  1.0,
+                  1.59,
+                  2.18,
+                  2.7700000000000005,
+                  3.3600000000000003,
+                  3.95,
+                  4.540000000000001,
+                  5.130000000000001,
+                  5.720000000000001,
+                  6.3100000000000005,
+                  6.9
+                ],
+                "y": [
+                  6,
+                  4,
+                  0,
+                  0,
+                  3,
+                  3,
+                  6,
+                  3,
+                  3,
+                  2
+                ]
+              },
+              "characteristic_examples": null,
+              "characteristic_words": null,
+              "small_distribution": {
+                "type": "evidently.metric_results.DistributionIncluded",
+                "x": [
+                  1.3,
+                  1.86,
+                  2.42,
+                  2.9800000000000004,
+                  3.54,
+                  4.1000000000000005,
+                  4.66,
+                  5.220000000000001,
+                  5.78,
+                  6.340000000000001,
+                  6.9
+                ],
+                "y": [
+                  0.5952380952380951,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.1785714285714284,
+                  0.17857142857142871,
+                  0.4166666666666663,
+                  0.11904761904761912,
+                  0.1785714285714284,
+                  0.11904761904761912
+                ]
+              },
+              "correlations": {
+                "petal length (cm)": 1.0,
+                "petal width (cm)": 0.9639924197754642,
+                "sepal length (cm)": 0.9112958907976892,
+                "sepal width (cm)": -0.4171827565618529
+              }
+            },
+            "reference": {
+              "type": "evidently.calculations.data_drift.DriftStatsField",
+              "distribution": {
+                "type": "evidently.metric_results.Distribution",
+                "x": [
+                  1.0,
+                  1.59,
+                  2.18,
+                  2.7700000000000005,
+                  3.3600000000000003,
+                  3.95,
+                  4.540000000000001,
+                  5.130000000000001,
+                  5.720000000000001,
+                  6.3100000000000005,
+                  6.9
+                ],
+                "y": [
+                  31,
+                  9,
+                  0,
+                  3,
+                  5,
+                  23,
+                  23,
+                  15,
+                  8,
+                  3
+                ]
+              },
+              "characteristic_examples": null,
+              "characteristic_words": null,
+              "small_distribution": {
+                "type": "evidently.metric_results.DistributionIncluded",
+                "x": [
+                  1.0,
+                  1.57,
+                  2.14,
+                  2.71,
+                  3.2800000000000002,
+                  3.8500000000000005,
+                  4.42,
+                  4.99,
+                  5.5600000000000005,
+                  6.130000000000001,
+                  6.7
+                ],
+                "y": [
+                  0.4532163742690058,
+                  0.13157894736842105,
+                  0.0,
+                  0.014619883040935665,
+                  0.087719298245614,
+                  0.27777777777777807,
+                  0.263157894736842,
+                  0.263157894736842,
+                  0.20467836257309932,
+                  0.058479532163742756
+                ]
+              },
+              "correlations": {
+                "petal length (cm)": 1.0,
+                "petal width (cm)": 0.9625770310729654,
+                "sepal length (cm)": 0.86217498541224,
+                "sepal width (cm)": -0.43208859755110135
+              }
+            },
+            "scatter": {
+              "type": "evidently.metric_results.ScatterAggField",
+              "scatter": {
+                "current (mean)": {
+                  "per": {
+                    "0": 0,
+                    "1": 3,
+                    "2": 9,
+                    "3": 11,
+                    "4": 18,
+                    "5": 22,
+                    "6": 23,
+                    "7": 24,
+                    "8": 29,
+                    "9": 39,
+                    "10": 50,
+                    "11": 51,
+                    "12": 60,
+                    "13": 65,
+                    "14": 66,
+                    "15": 70,
+                    "16": 73,
+                    "17": 76,
+                    "18": 80,
+                    "19": 104,
+                    "20": 109,
+                    "21": 111,
+                    "22": 120,
+                    "23": 130,
+                    "24": 131,
+                    "25": 134,
+                    "26": 135,
+                    "27": 145,
+                    "28": 147,
+                    "29": 149
+                  },
+                  "mean": {
+                    "0": 1.5,
+                    "1": 1.4,
+                    "2": 1.7,
+                    "3": 1.5,
+                    "4": 1.6,
+                    "5": 1.6,
+                    "6": 1.6,
+                    "7": 1.5,
+                    "8": 1.3,
+                    "9": 1.4,
+                    "10": 4.5,
+                    "11": 4.7,
+                    "12": 3.6,
+                    "13": 4.5,
+                    "14": 3.9,
+                    "15": 4.7,
+                    "16": 4.8,
+                    "17": 4.5,
+                    "18": 3.9,
+                    "19": 5.8,
+                    "20": 5.8,
+                    "21": 5.1,
+                    "22": 6.9,
+                    "23": 4.9,
+                    "24": 5.6,
+                    "25": 6.4,
+                    "26": 5.6,
+                    "27": 5.1,
+                    "28": 5.9,
+                    "29": 5.2
+                  },
+                  "std": {
+                    "0": NaN,
+                    "1": NaN,
+                    "2": NaN,
+                    "3": NaN,
+                    "4": NaN,
+                    "5": NaN,
+                    "6": NaN,
+                    "7": NaN,
+                    "8": NaN,
+                    "9": NaN,
+                    "10": NaN,
+                    "11": NaN,
+                    "12": NaN,
+                    "13": NaN,
+                    "14": NaN,
+                    "15": NaN,
+                    "16": NaN,
+                    "17": NaN,
+                    "18": NaN,
+                    "19": NaN,
+                    "20": NaN,
+                    "21": NaN,
+                    "22": NaN,
+                    "23": NaN,
+                    "24": NaN,
+                    "25": NaN,
+                    "26": NaN,
+                    "27": NaN,
+                    "28": NaN,
+                    "29": NaN
+                  }
+                }
+              },
+              "x_name": "Index binned",
+              "plot_shape": {
+                "y0": 1.9743220987823027,
+                "y1": 5.479011234551031
+              }
+            }
+          },
+          "petal width (cm)": {
+            "type": "evidently.calculations.data_drift.ColumnDataDriftMetrics",
+            "column_name": "petal width (cm)",
+            "column_type": "num",
+            "stattest_name": "K-S p_value",
+            "stattest_threshold": 0.05,
+            "drift_score": 0.7602684982692284,
+            "drift_detected": false,
+            "current": {
+              "type": "evidently.calculations.data_drift.DriftStatsField",
+              "distribution": {
+                "type": "evidently.metric_results.Distribution",
+                "x": [
+                  0.1,
+                  0.3666666666666667,
+                  0.6333333333333333,
+                  0.9,
+                  1.1666666666666667,
+                  1.4333333333333333,
+                  1.7000000000000002,
+                  1.9666666666666668,
+                  2.2333333333333334,
+                  2.5
+                ],
+                "y": [
+                  8,
+                  2,
+                  0,
+                  1,
+                  5,
+                  3,
+                  2,
+                  5,
+                  4
+                ]
+              },
+              "characteristic_examples": null,
+              "characteristic_words": null,
+              "small_distribution": {
+                "type": "evidently.metric_results.DistributionIncluded",
+                "x": [
+                  0.1,
+                  0.31999999999999995,
+                  0.5399999999999999,
+                  0.7599999999999999,
+                  0.9799999999999999,
+                  1.2,
+                  1.42,
+                  1.64,
+                  1.8599999999999999,
+                  2.0799999999999996,
+                  2.3
+                ],
+                "y": [
+                  1.2121212121212124,
+                  0.30303030303030304,
+                  0.0,
+                  0.0,
+                  0.15151515151515146,
+                  0.7575757575757577,
+                  0.45454545454545464,
+                  0.30303030303030304,
+                  0.30303030303030337,
+                  1.0606060606060597
+                ]
+              },
+              "correlations": {
+                "petal length (cm)": 0.9639924197754642,
+                "petal width (cm)": 1.0,
+                "sepal length (cm)": 0.8800341300760794,
+                "sepal width (cm)": -0.3565849057527504
+              }
+            },
+            "reference": {
+              "type": "evidently.calculations.data_drift.DriftStatsField",
+              "distribution": {
+                "type": "evidently.metric_results.Distribution",
+                "x": [
+                  0.1,
+                  0.3666666666666667,
+                  0.6333333333333333,
+                  0.9,
+                  1.1666666666666667,
+                  1.4333333333333333,
+                  1.7000000000000002,
+                  1.9666666666666668,
+                  2.2333333333333334,
+                  2.5
+                ],
+                "y": [
+                  33,
+                  7,
+                  0,
+                  9,
+                  21,
+                  15,
+                  15,
+                  10,
+                  10
+                ]
+              },
+              "characteristic_examples": null,
+              "characteristic_words": null,
+              "small_distribution": {
+                "type": "evidently.metric_results.DistributionIncluded",
+                "x": [
+                  0.1,
+                  0.33999999999999997,
+                  0.58,
+                  0.82,
+                  1.06,
+                  1.3,
+                  1.54,
+                  1.78,
+                  2.02,
+                  2.2600000000000002,
+                  2.5
+                ],
+                "y": [
+                  1.1458333333333335,
+                  0.20833333333333334,
+                  0.034722222222222224,
+                  0.24305555555555544,
+                  0.17361111111111113,
+                  0.9722222222222222,
+                  0.17361111111111113,
+                  0.6597222222222222,
+                  0.20833333333333315,
+                  0.34722222222222254
+                ]
+              },
+              "correlations": {
+                "petal length (cm)": 0.9625770310729654,
+                "petal width (cm)": 1.0,
+                "sepal length (cm)": 0.8014800750351133,
+                "sepal width (cm)": -0.36950858513300167
+              }
+            },
+            "scatter": {
+              "type": "evidently.metric_results.ScatterAggField",
+              "scatter": {
+                "current (mean)": {
+                  "per": {
+                    "0": 0,
+                    "1": 3,
+                    "2": 9,
+                    "3": 11,
+                    "4": 18,
+                    "5": 22,
+                    "6": 23,
+                    "7": 24,
+                    "8": 29,
+                    "9": 39,
+                    "10": 50,
+                    "11": 51,
+                    "12": 60,
+                    "13": 65,
+                    "14": 66,
+                    "15": 70,
+                    "16": 73,
+                    "17": 76,
+                    "18": 80,
+                    "19": 104,
+                    "20": 109,
+                    "21": 111,
+                    "22": 120,
+                    "23": 130,
+                    "24": 131,
+                    "25": 134,
+                    "26": 135,
+                    "27": 145,
+                    "28": 147,
+                    "29": 149
+                  },
+                  "mean": {
+                    "0": 0.1,
+                    "1": 0.1,
+                    "2": 0.3,
+                    "3": 0.3,
+                    "4": 0.4,
+                    "5": 0.2,
+                    "6": 0.2,
+                    "7": 0.4,
+                    "8": 0.2,
+                    "9": 0.3,
+                    "10": 1.3,
+                    "11": 1.6,
+                    "12": 1.3,
+                    "13": 1.5,
+                    "14": 1.1,
+                    "15": 1.2,
+                    "16": 1.4,
+                    "17": 1.5,
+                    "18": 1.2,
+                    "19": 2.2,
+                    "20": 1.8,
+                    "21": 2.0,
+                    "22": 2.3,
+                    "23": 1.8,
+                    "24": 2.1,
+                    "25": 2.0,
+                    "26": 2.2,
+                    "27": 2.3,
+                    "28": 2.3,
+                    "29": 2.3
+                  },
+                  "std": {
+                    "0": NaN,
+                    "1": NaN,
+                    "2": NaN,
+                    "3": NaN,
+                    "4": NaN,
+                    "5": NaN,
+                    "6": NaN,
+                    "7": NaN,
+                    "8": NaN,
+                    "9": NaN,
+                    "10": NaN,
+                    "11": NaN,
+                    "12": NaN,
+                    "13": NaN,
+                    "14": NaN,
+                    "15": NaN,
+                    "16": NaN,
+                    "17": NaN,
+                    "18": NaN,
+                    "19": NaN,
+                    "20": NaN,
+                    "21": NaN,
+                    "22": NaN,
+                    "23": NaN,
+                    "24": NaN,
+                    "25": NaN,
+                    "26": NaN,
+                    "27": NaN,
+                    "28": NaN,
+                    "29": NaN
+                  }
+                }
+              },
+              "x_name": "Index binned",
+              "plot_shape": {
+                "y0": 0.4310445753752339,
+                "y1": 1.9356220912914328
+              }
+            }
+          },
+          "sepal length (cm)": {
+            "type": "evidently.calculations.data_drift.ColumnDataDriftMetrics",
+            "column_name": "sepal length (cm)",
+            "column_type": "num",
+            "stattest_name": "K-S p_value",
+            "stattest_threshold": 0.05,
+            "drift_score": 0.8799325977736985,
+            "drift_detected": false,
+            "current": {
+              "type": "evidently.calculations.data_drift.DriftStatsField",
+              "distribution": {
+                "type": "evidently.metric_results.Distribution",
+                "x": [
+                  4.3,
+                  4.66,
+                  5.02,
+                  5.38,
+                  5.74,
+                  6.1,
+                  6.46,
+                  6.82,
+                  7.18,
+                  7.54,
+                  7.9
+                ],
+                "y": [
+                  0,
+                  6,
+                  1,
+                  6,
+                  2,
+                  6,
+                  6,
+                  1,
+                  0,
+                  2
+                ]
+              },
+              "characteristic_examples": null,
+              "characteristic_words": null,
+              "small_distribution": {
+                "type": "evidently.metric_results.DistributionIncluded",
+                "x": [
+                  4.7,
+                  5.0200000000000005,
+                  5.34,
+                  5.66,
+                  5.98,
+                  6.300000000000001,
+                  6.62,
+                  6.94,
+                  7.26,
+                  7.58,
+                  7.9
+                ],
+                "y": [
+                  0.6249999999999994,
+                  0.10416666666666687,
+                  0.4166666666666663,
+                  0.3124999999999997,
+                  0.5208333333333328,
+                  0.41666666666666746,
+                  0.5208333333333328,
+                  0.0,
+                  0.0,
+                  0.20833333333333315
+                ]
+              },
+              "correlations": {
+                "petal length (cm)": 0.9112958907976892,
+                "petal width (cm)": 0.8800341300760794,
+                "sepal length (cm)": 1.0,
+                "sepal width (cm)": -0.16186598664408025
+              }
+            },
+            "reference": {
+              "type": "evidently.calculations.data_drift.DriftStatsField",
+              "distribution": {
+                "type": "evidently.metric_results.Distribution",
+                "x": [
+                  4.3,
+                  4.66,
+                  5.02,
+                  5.38,
+                  5.74,
+                  6.1,
+                  6.46,
+                  6.82,
+                  7.18,
+                  7.54,
+                  7.9
+                ],
+                "y": [
+                  9,
+                  17,
+                  13,
+                  21,
+                  14,
+                  20,
+                  12,
+                  5,
+                  5,
+                  4
+                ]
+              },
+              "characteristic_examples": null,
+              "characteristic_words": null,
+              "small_distribution": {
+                "type": "evidently.metric_results.DistributionIncluded",
+                "x": [
+                  4.3,
+                  4.64,
+                  4.9799999999999995,
+                  5.32,
+                  5.66,
+                  6.0,
+                  6.34,
+                  6.68,
+                  7.02,
+                  7.359999999999999,
+                  7.7
+                ],
+                "y": [
+                  0.22058823529411775,
+                  0.1960784313725491,
+                  0.5392156862745086,
+                  0.3676470588235296,
+                  0.3676470588235296,
+                  0.49019607843137275,
+                  0.24509803921568638,
+                  0.269607843137255,
+                  0.12254901960784319,
+                  0.12254901960784287
+                ]
+              },
+              "correlations": {
+                "petal length (cm)": 0.86217498541224,
+                "petal width (cm)": 0.8014800750351133,
+                "sepal length (cm)": 1.0,
+                "sepal width (cm)": -0.10692625465311835
+              }
+            },
+            "scatter": {
+              "type": "evidently.metric_results.ScatterAggField",
+              "scatter": {
+                "current (mean)": {
+                  "per": {
+                    "0": 0,
+                    "1": 3,
+                    "2": 9,
+                    "3": 11,
+                    "4": 18,
+                    "5": 22,
+                    "6": 23,
+                    "7": 24,
+                    "8": 29,
+                    "9": 39,
+                    "10": 50,
+                    "11": 51,
+                    "12": 60,
+                    "13": 65,
+                    "14": 66,
+                    "15": 70,
+                    "16": 73,
+                    "17": 76,
+                    "18": 80,
+                    "19": 104,
+                    "20": 109,
+                    "21": 111,
+                    "22": 120,
+                    "23": 130,
+                    "24": 131,
+                    "25": 134,
+                    "26": 135,
+                    "27": 145,
+                    "28": 147,
+                    "29": 149
+                  },
+                  "mean": {
+                    "0": 4.9,
+                    "1": 4.8,
+                    "2": 5.7,
+                    "3": 5.1,
+                    "4": 5.0,
+                    "5": 4.7,
+                    "6": 4.8,
+                    "7": 5.4,
+                    "8": 5.5,
+                    "9": 4.8,
+                    "10": 5.7,
+                    "11": 6.3,
+                    "12": 5.6,
+                    "13": 6.2,
+                    "14": 5.6,
+                    "15": 6.1,
+                    "16": 6.8,
+                    "17": 6.0,
+                    "18": 5.8,
+                    "19": 6.5,
+                    "20": 6.7,
+                    "21": 6.5,
+                    "22": 7.7,
+                    "23": 6.1,
+                    "24": 6.4,
+                    "25": 7.9,
+                    "26": 6.4,
+                    "27": 6.9,
+                    "28": 6.8,
+                    "29": 6.7
+                  },
+                  "std": {
+                    "0": NaN,
+                    "1": NaN,
+                    "2": NaN,
+                    "3": NaN,
+                    "4": NaN,
+                    "5": NaN,
+                    "6": NaN,
+                    "7": NaN,
+                    "8": NaN,
+                    "9": NaN,
+                    "10": NaN,
+                    "11": NaN,
+                    "12": NaN,
+                    "13": NaN,
+                    "14": NaN,
+                    "15": NaN,
+                    "16": NaN,
+                    "17": NaN,
+                    "18": NaN,
+                    "19": NaN,
+                    "20": NaN,
+                    "21": NaN,
+                    "22": NaN,
+                    "23": NaN,
+                    "24": NaN,
+                    "25": NaN,
+                    "26": NaN,
+                    "27": NaN,
+                    "28": NaN,
+                    "29": NaN
+                  }
+                }
+              },
+              "x_name": "Index binned",
+              "plot_shape": {
+                "y0": 4.985361615756706,
+                "y1": 6.632971717576626
+              }
+            }
+          },
+          "sepal width (cm)": {
+            "type": "evidently.calculations.data_drift.ColumnDataDriftMetrics",
+            "column_name": "sepal width (cm)",
+            "column_type": "num",
+            "stattest_name": "K-S p_value",
+            "stattest_threshold": 0.05,
+            "drift_score": 0.9998273720340813,
+            "drift_detected": false,
+            "current": {
+              "type": "evidently.calculations.data_drift.DriftStatsField",
+              "distribution": {
+                "type": "evidently.metric_results.Distribution",
+                "x": [
+                  2.0,
+                  2.24,
+                  2.48,
+                  2.72,
+                  2.96,
+                  3.2,
+                  3.4400000000000004,
+                  3.6800000000000006,
+                  3.9200000000000004,
+                  4.16,
+                  4.4
+                ],
+                "y": [
+                  1,
+                  0,
+                  4,
+                  7,
+                  8,
+                  6,
+                  1,
+                  3,
+                  0,
+                  0
+                ]
+              },
+              "characteristic_examples": null,
+              "characteristic_words": null,
+              "small_distribution": {
+                "type": "evidently.metric_results.DistributionIncluded",
+                "x": [
+                  2.2,
+                  2.3600000000000003,
+                  2.52,
+                  2.68,
+                  2.84,
+                  3.0,
+                  3.16,
+                  3.3200000000000003,
+                  3.48,
+                  3.6399999999999997,
+                  3.8
+                ],
+                "y": [
+                  0.20833333333333315,
+                  0.41666666666666746,
+                  0.20833333333333315,
+                  1.2500000000000024,
+                  0.4166666666666663,
+                  1.6666666666666652,
+                  0.8333333333333326,
+                  0.41666666666666746,
+                  0.20833333333333373,
+                  0.6249999999999994
+                ]
+              },
+              "correlations": {
+                "petal length (cm)": -0.4171827565618529,
+                "petal width (cm)": -0.3565849057527504,
+                "sepal length (cm)": -0.16186598664408025,
+                "sepal width (cm)": 1.0
+              }
+            },
+            "reference": {
+              "type": "evidently.calculations.data_drift.DriftStatsField",
+              "distribution": {
+                "type": "evidently.metric_results.Distribution",
+                "x": [
+                  2.0,
+                  2.24,
+                  2.48,
+                  2.72,
+                  2.96,
+                  3.2,
+                  3.4400000000000004,
+                  3.6800000000000006,
+                  3.9200000000000004,
+                  4.16,
+                  4.4
+                ],
+                "y": [
+                  3,
+                  7,
+                  18,
+                  17,
+                  29,
+                  25,
+                  9,
+                  8,
+                  2,
+                  2
+                ]
+              },
+              "characteristic_examples": null,
+              "characteristic_words": null,
+              "small_distribution": {
+                "type": "evidently.metric_results.DistributionIncluded",
+                "x": [
+                  2.0,
+                  2.24,
+                  2.48,
+                  2.72,
+                  2.96,
+                  3.2,
+                  3.4400000000000004,
+                  3.6800000000000006,
+                  3.9200000000000004,
+                  4.16,
+                  4.4
+                ],
+                "y": [
+                  0.10416666666666657,
+                  0.2430555555555558,
+                  0.6249999999999994,
+                  0.5902777777777783,
+                  1.0069444444444435,
+                  0.8680555555555548,
+                  0.3124999999999997,
+                  0.277777777777778,
+                  0.0694444444444445,
+                  0.06944444444444439
+                ]
+              },
+              "correlations": {
+                "petal length (cm)": -0.43208859755110135,
+                "petal width (cm)": -0.36950858513300167,
+                "sepal length (cm)": -0.10692625465311835,
+                "sepal width (cm)": 1.0
+              }
+            },
+            "scatter": {
+              "type": "evidently.metric_results.ScatterAggField",
+              "scatter": {
+                "current (mean)": {
+                  "per": {
+                    "0": 0,
+                    "1": 3,
+                    "2": 9,
+                    "3": 11,
+                    "4": 18,
+                    "5": 22,
+                    "6": 23,
+                    "7": 24,
+                    "8": 29,
+                    "9": 39,
+                    "10": 50,
+                    "11": 51,
+                    "12": 60,
+                    "13": 65,
+                    "14": 66,
+                    "15": 70,
+                    "16": 73,
+                    "17": 76,
+                    "18": 80,
+                    "19": 104,
+                    "20": 109,
+                    "21": 111,
+                    "22": 120,
+                    "23": 130,
+                    "24": 131,
+                    "25": 134,
+                    "26": 135,
+                    "27": 145,
+                    "28": 147,
+                    "29": 149
+                  },
+                  "mean": {
+                    "0": 3.1,
+                    "1": 3.0,
+                    "2": 3.8,
+                    "3": 3.8,
+                    "4": 3.4,
+                    "5": 3.2,
+                    "6": 3.1,
+                    "7": 3.4,
+                    "8": 3.5,
+                    "9": 3.0,
+                    "10": 2.8,
+                    "11": 3.3,
+                    "12": 2.9,
+                    "13": 2.2,
+                    "14": 2.5,
+                    "15": 2.8,
+                    "16": 2.8,
+                    "17": 2.9,
+                    "18": 2.7,
+                    "19": 3.0,
+                    "20": 2.5,
+                    "21": 3.2,
+                    "22": 2.6,
+                    "23": 3.0,
+                    "24": 2.8,
+                    "25": 3.8,
+                    "26": 2.8,
+                    "27": 3.1,
+                    "28": 3.2,
+                    "29": 3.0
+                  },
+                  "std": {
+                    "0": NaN,
+                    "1": NaN,
+                    "2": NaN,
+                    "3": NaN,
+                    "4": NaN,
+                    "5": NaN,
+                    "6": NaN,
+                    "7": NaN,
+                    "8": NaN,
+                    "9": NaN,
+                    "10": NaN,
+                    "11": NaN,
+                    "12": NaN,
+                    "13": NaN,
+                    "14": NaN,
+                    "15": NaN,
+                    "16": NaN,
+                    "17": NaN,
+                    "18": NaN,
+                    "19": NaN,
+                    "20": NaN,
+                    "21": NaN,
+                    "22": NaN,
+                    "23": NaN,
+                    "24": NaN,
+                    "25": NaN,
+                    "26": NaN,
+                    "27": NaN,
+                    "28": NaN,
+                    "29": NaN
+                  }
+                }
+              },
+              "x_name": "Index binned",
+              "plot_shape": {
+                "y0": 2.6125436494499605,
+                "y1": 3.5107896838833725
+              }
+            }
+          }
+        },
+        "dataset_columns": {
+          "type": "evidently.metric_results.DatasetColumns",
+          "utility_columns": {
+            "type": "evidently.metric_results.DatasetUtilityColumns",
+            "date": null,
+            "id": null,
+            "target": null,
+            "prediction": null
+          },
+          "target_type": null,
+          "num_feature_names": [
+            "petal length (cm)",
+            "petal width (cm)",
+            "sepal length (cm)",
+            "sepal width (cm)"
+          ],
+          "cat_feature_names": [],
+          "text_feature_names": [],
+          "datetime_feature_names": [],
+          "target_names": null,
+          "task": null
+        },
+        "current_fi": null,
+        "reference_fi": null
+      }
+    ],
+    "tests": [],
+    "test_results": [],
+    "options": {
+      "color": null,
+      "render": null,
+      "custom": {}
+    }
+  },
+  "metrics_ids": [
+    0,
+    1
+  ],
+  "test_ids": [],
+  "options": {
+    "color": null,
+    "render": null,
+    "custom": {}
+  }
+}

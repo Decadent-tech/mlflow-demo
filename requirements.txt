@@ -1,4 +1,6 @@
 mlflow==2.9.2
+evidently==0.4.14
+pydantic==1.10.13
+numpy==1.26.4
 scikit-learn
-evidently>=0.7.0
 pandas
