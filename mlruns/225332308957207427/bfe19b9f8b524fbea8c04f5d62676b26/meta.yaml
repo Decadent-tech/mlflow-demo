@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/HP/OneDrive/Dokumen/GitHub/mlflow-demo/mlruns/225332308957207427/bfe19b9f8b524fbea8c04f5d62676b26/artifacts
+end_time: 1756694407727
+entry_point_name: ''
+experiment_id: '225332308957207427'
+lifecycle_stage: active
+run_id: bfe19b9f8b524fbea8c04f5d62676b26
+run_name: RandomForest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756694402063
+status: 3
+tags: []
+user_id: HP

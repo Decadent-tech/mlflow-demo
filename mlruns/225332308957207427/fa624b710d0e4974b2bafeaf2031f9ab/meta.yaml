@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/HP/OneDrive/Dokumen/GitHub/mlflow-demo/mlruns/225332308957207427/fa624b710d0e4974b2bafeaf2031f9ab/artifacts
+end_time: 1756694402049
+entry_point_name: ''
+experiment_id: '225332308957207427'
+lifecycle_stage: active
+run_id: fa624b710d0e4974b2bafeaf2031f9ab
+run_name: LogisticRegression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756694385390
+status: 3
+tags: []
+user_id: HP

@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/HP/OneDrive/Dokumen/GitHub/mlflow-demo/mlruns/225332308957207427/models/m-8e2a90327d69463c95d41c4a83e563c1/artifacts
+creation_timestamp: 1756694385705
+experiment_id: '225332308957207427'
+last_updated_timestamp: 1756694402017
+model_id: m-8e2a90327d69463c95d41c4a83e563c1
+model_type: null
+name: model
+source_run_id: fa624b710d0e4974b2bafeaf2031f9ab
+status: 2
+status_message: null
