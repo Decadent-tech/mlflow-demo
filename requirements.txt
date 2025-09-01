@@ -1,4 +1,4 @@
 mlflow==2.9.2
 scikit-learn
-evidently
+evidently>=0.7.0
 pandas

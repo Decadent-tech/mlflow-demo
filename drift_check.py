@@ -2,8 +2,9 @@
 import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
-from evidently.report import Report
-from evidently.metric_preset import DataDriftPreset
+from evidently import Report
+from evidently.metric_preset  import DataDriftPreset
+
 
 # Load reference & current data
 X, y = load_iris(return_X_y=True, as_frame=True)
