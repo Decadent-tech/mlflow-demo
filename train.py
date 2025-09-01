@@ -10,7 +10,7 @@ import pandas as pd
 
 # Store MLflow runs in the local project folder
 os.environ["MLFLOW_TRACKING_URI"] = "file:./mlruns"
-# os.environ["MLFLOW_ARTIFACT_URI"] = os.path.abspath("./mlruns/artifacts")
+os.environ["MLFLOW_ARTIFACT_URI"] = os.path.abspath("./mlruns/artifacts")
 
 
 # Load data
@@ -46,7 +46,7 @@ for name, model in models.items():
 
         # 🔑 This actually saves the model into ./mlruns and registers it with the run
         mlflow.sklearn.log_model(
-        sk_model=model,
-        artifact_path="model",
-        input_example=input_example
+            sk_model=model,
+            artifact_path="model",
+            input_example=input_example
         )
