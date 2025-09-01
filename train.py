@@ -38,7 +38,7 @@ for name, model in models.items():
         mlflow.log_param("model_name", name)
         mlflow.log_metric("accuracy", acc)
         mlflow.log_metric("f1_score", f1)
-        mlflow.sklearn.log_model(model, "model")
+        #mlflow.sklearn.log_model(model, name="model")
 
         print(f"{name}: Accuracy={acc:.4f}, F1={f1:.4f}")
         input_example = pd.DataFrame(X_test[:1], columns=[f"feature_{i}" for i in range(X.shape[1])])
