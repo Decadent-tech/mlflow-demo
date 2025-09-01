@@ -1,4 +1,5 @@
 import pandas as pd
+import mlflow
 import evidently
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
@@ -15,6 +16,8 @@ report.run(reference_data=X_ref, current_data=X_cur)
 
 # Save report to HTML
 report.save("drift_report.html")
+with mlflow.start_run():
+    mlflow.log_artifact("drift_report.html", artifact_path="drift")
 
 # Extract drift detection result
 summary = report.as_dict()
